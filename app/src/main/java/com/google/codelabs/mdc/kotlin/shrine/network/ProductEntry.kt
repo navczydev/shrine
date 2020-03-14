@@ -24,7 +24,7 @@ class ProductEntry(
             val jsonProductsString = inputStream.bufferedReader().use(BufferedReader::readText)
             val gson = Gson()
             val productListType = object : TypeToken<ArrayList<ProductEntry>>() {}.type
-            return gson.fromJson<List<ProductEntry>>(jsonProductsString, productListType)
+            return gson.fromJson(jsonProductsString, productListType)
         }
     }
 }
